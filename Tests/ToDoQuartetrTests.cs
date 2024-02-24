@@ -20,6 +20,13 @@ namespace Eisenhower_Matrix.Tests
             Assert.Throws<ArgumentException>(() => toDoQuarter.AddItem(id, title, pastDeadline, isDone));
         }
 
+        [Test]
+        public void RemoveItem_InvalidIndex_ShouldThrowArgumentOutOfRangeException()
+        {  
+            var toDoQuarter = new ToDoQuarter();
+            int invalidIndex = -1;
 
+            Assert.Throws<ArgumentOutOfRangeException>(() => toDoQuarter.RemoveItem(invalidIndex));
+        }
     }
 }
