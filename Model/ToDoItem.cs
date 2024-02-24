@@ -12,10 +12,10 @@ public class ToDoItem
 
     public ToDoItem(int id, string title, DateTime deadline, bool isDone)
     {
-        if (deadline < DateTime.UtcNow)
-        {
-            throw new ArgumentException("Deadline cannot be in the past", nameof(deadline));
-        }
+        //if (deadline < DateTime.UtcNow)
+        //{
+        //    throw new ArgumentException("Deadline cannot be in the past", nameof(deadline));
+        //}
 
         Id = id;
         Title = title;
