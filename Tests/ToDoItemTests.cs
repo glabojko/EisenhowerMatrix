@@ -1,11 +1,12 @@
-﻿using NUnit.Framework;
+﻿using Eisenhower_Matrix.Model;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eisenhower_Matrix.Model
+namespace Eisenhower_Matrix.Tests
 {
     [TestFixture]
     public class ToDoItemTests
@@ -15,7 +16,7 @@ namespace Eisenhower_Matrix.Model
         {
             int id = 1;
             string title = "Task with Past Deadline";
-            DateTime pastDeadline = DateTime.Now.AddDays(-1); // Setting a past deadline
+            DateTime pastDeadline = DateTime.UtcNow.AddDays(-1); // Setting a past deadline
             bool isDone = false;
 
             Assert.Throws<ArgumentException>(() => new ToDoItem(id, title, pastDeadline, isDone));

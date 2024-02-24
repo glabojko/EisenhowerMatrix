@@ -20,6 +20,11 @@ namespace Eisenhower_Matrix
 
         public void RemoveItem(int index)
         {
+            if (index < 0 || index >= ToDoItems.Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range");
+            }
+
             ToDoItems.Remove(ToDoItems[index]);
         }
         public void ArchiveItems()

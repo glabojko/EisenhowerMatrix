@@ -136,7 +136,7 @@ namespace Eisenhower_Matrix
                 }
             }
             Console.Clear();
-            display.DisplayQuestion("Thank you for using our Application.\nSee you soon!\n\nCreated (2023) by:\nRadosław Rocławski\nGrzegorz Łabojko\nDaniel Czyż\n\n\n\n");
+            display.DisplayQuestion("Thank you for using our Application.\n\n");
         }
     }
 }
