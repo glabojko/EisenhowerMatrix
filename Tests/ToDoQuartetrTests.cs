@@ -37,5 +37,17 @@ namespace Eisenhower_Matrix.Tests
 
             Assert.Throws<IndexOutOfRangeException>(() => toDoQuarter.GetItem(1));
         }
+
+        [Test]
+        public void AddItem_NullTitle_ShouldThrowArgumentException()
+        {
+            var toDoQuarter = new ToDoQuarter();
+            int id = 1;
+            string title = null; 
+            DateTime deadline = DateTime.UtcNow.AddDays(1); 
+            bool isDone = false;
+
+            Assert.Throws<ArgumentException>(() => toDoQuarter.AddItem(id, title, deadline, isDone));
+        }
     }
 }
